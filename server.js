@@ -20,6 +20,8 @@ const db = knex({
   }
 });
 
+console.log("db:", db)
+
 const port = process.env.PORT || 3000;
 
 const app = express();
