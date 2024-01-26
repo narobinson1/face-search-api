@@ -27,10 +27,7 @@ const port = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://face-search.onrender.com',
-  credentials: true
-}));
+app.use(cors());
 
 app.use(express.json()); // latest version of exressJS now comes with Body-Parser!
 
