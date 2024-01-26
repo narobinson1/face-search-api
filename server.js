@@ -13,10 +13,7 @@ const db = knex({
   // connect to your own database here:
   client: 'pg',
   connection: {
-    host : process.env.DATABASE_HOSTNAME,
-    user : process.env.DATABASE_USERNAME,
-    password : process.env.DATABASE_PASSWORD,
-    database : process.env.DATABASE_NAME
+    connectionString: process.env.DATABASE_URL,
   }
 });
 
