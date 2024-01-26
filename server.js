@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser'); // latest version of exressJS now comes with Body-Parser!
+const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
@@ -10,7 +10,6 @@ const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
 const db = knex({
-  // connect to your own database here:
   client: 'pg',
   connection: {
     connectionString: process.env.DB_URL,
@@ -21,7 +20,7 @@ const app = express();
 
 app.use(cors());
 
-app.use(express.json()); // latest version of exressJS now comes with Body-Parser!
+app.use(express.json());
 
 app.get('/', (req, res)=> { res.send(db.users) })
 app.post('/signin', signin.handleSignin(db, bcrypt))
