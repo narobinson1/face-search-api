@@ -14,7 +14,7 @@ const handleRegister = (req, res, db, bcrypt) => {
       })
       .into('login')
       .returning('email')
-      .then(loginEmail => {
+      .then((loginEmail) => {
         console.log(loginEmail)
         return trx('users')
           .returning('*')
@@ -28,6 +28,7 @@ const handleRegister = (req, res, db, bcrypt) => {
             joined: new Date()
           })
           .then(user => {
+            console.log("returning user")
             res.json(user[0]);
           })
       })
