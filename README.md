@@ -1,6 +1,6 @@
-# face-search-api
+# face-search-api, API for face-search repo
 
-1. Clone this repo
+Instructions for installation:
+1. Download this repo
 2. Run `npm install`
 3. Run `npm start`
-
