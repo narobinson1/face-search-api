@@ -1,6 +1,5 @@
-# face-search-api, API for face-search repo
+# FaceSearch Backend 🤠
 
-Instructions for installation:
-1. Download this repo
-2. Run `npm install`
-3. Run `npm start`
+Checkout how the FaceSearch app handles Authentication, Data Storage, and External API Integration!
+
+P.S. You can find the Frontend at my face-search repo
